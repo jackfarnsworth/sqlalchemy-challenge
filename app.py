@@ -57,7 +57,7 @@ def names():
     session = Session(engine)
 
     """Return a list of all passenger names"""
-    # Query all passengers
+    # Query all stations
     results = session.query(station.station).all()
 
     session.close()
@@ -78,7 +78,7 @@ def stations():
 
     session.close()
 
-    # Create a dictionary from the row data and append to a list of all_passengers
+    # Create a dictionary from the row data
     prcp_dict = {}
     for date, prcp in results:
         prcp_dict[date] = prcp
